@@ -13,7 +13,6 @@ const app = express()
 
 // Khoi dong express middleware 
 app.use(express.json())
-
 app.engine(
     'handlebars', 
     handlebars.engine(
@@ -23,7 +22,7 @@ app.engine(
     )
 )
 app.set('view engine', 'handlebars')
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'view'));
 
 
 // ket noi co so du lieu
@@ -31,7 +30,7 @@ connectDB()
 
 // Mot so routes co ban, co the dua vao file rieng trong folder routes
 app.get('/', (req, res)=> res.render('index'))
-app.get('/about', (req, res)=> res.send('about'))
+app.get('/about', (req, res)=> res.render('about'))
 
 // sử dụng route 
 app.use('/posts', post)
