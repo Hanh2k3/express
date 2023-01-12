@@ -1,0 +1,16 @@
+<div class="card card-body">
+    <form action="/posts" class="" method="POST">
+        <div class="mb-3 mt-3">
+            <label for="title" class="form-label">Tên bài viết</label>
+            <input type="text" class="form-control" id="title"
+                placeholder="Enter username" name="title" 
+                value="{{title}}">
+        </div>
+        <div class="mb-3">
+            <label for="text" class="form-label">Nội dung bài viết:</label>
+            <textarea name="text" id="text" cols="30" rows="10"
+                class="form-control">{{text}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Tạo bài viết</button>
+    </form>
+</div>

@@ -1,0 +1,17 @@
+<div class="card card-body">
+    <form action="/posts/edit/{{post._id}}?_method=PUT" class="" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="mb-3 mt-3">
+            <label for="title" class="form-label">Tên bài viết</label>
+            <input type="text" class="form-control" id="title"
+                name="title" 
+                value="{{post.title}}">
+        </div>
+        <div class="mb-3">
+            <label for="text" class="form-label">Nội dung bài viết:</label>
+            <textarea name="text" id="text" cols="30" rows="10"
+                class="form-control">{{post.text}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Cập nhật bài viết</button>
+    </form>
+</div>

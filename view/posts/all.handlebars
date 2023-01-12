@@ -1,0 +1,14 @@
+{{#each posts}}
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">{{ title }}</h4>
+        <p class="card-text">{{ text }}</p>
+        <a href="/posts/edit/{{_id}}" class="card-link">Chỉnh sửa</a>
+        <form action="/posts/delete/{{_id}}?_method=delete" method="POST">
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="Xóa" class="btn btn-warning">
+        
+        </form>
+    </div>
+</div>
+{{/each}}
